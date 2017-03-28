@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+
+<ion-list>
+
+    <ion-item *ngFor="let f of friends">
+      <ion-thumbnail item-left>
+        <img src="{{f.imgURL}}">
+      </ion-thumbnail>
+      <h2>{{f.name}}</h2>
+      <p>{{f.msg}}</p>
+      <button ion-button clear item-right (click)="itemTapped($event, f)">View</button>
+    </ion-item>
+
+  </ion-list>
+
+</ion-content>
